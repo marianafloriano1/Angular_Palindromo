@@ -1,0 +1,21 @@
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="card border border-1 border-success" style="width: 28rem;">
+      <div class="card-body">
+        <h5 class="card-title text-center mb-4 mt-4">Verificador de Palíndromos</h5>
+  
+        <!-- Caixa de input -->
+        <input 
+          [(ngModel)]="entrada" 
+          type="text" 
+          class="form-control text-center" 
+          placeholder="Digite uma palavra ou número"
+        />
+  
+        <!-- Exibe a imagem dependendo do resultado -->
+        <div class="text-center mt-3">
+          <img *ngIf="entrada" [src]="verificarPalindromo() ? 'https://st.depositphotos.com/1001911/1554/v/600/depositphotos_15540341-stock-illustration-thumb-up-emoticon.jpg' : 'https://st2.depositphotos.com/1967477/8364/v/450/depositphotos_83642588-stock-illustration-cartoon-emoticon-crying.jpg'" alt="Emoji" width="150px"/>
+        </div>
+      </div>
+    </div>
+  </div>
+  
